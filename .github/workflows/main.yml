@@ -10,7 +10,16 @@ on:
   schedule:
     - cron: '0 10 * * 2,5'
 
-  # Allows you to run this workflow manually from the Actions tab
+  #            - nombre: Primera interacción
+  usos: acciones/primera-interacción@v1.3.0
+  con:
+    Token para el repositorio. Se puede pasar usando {{ secrets.GITHUB_TOKEN }}
+    token de repositorio:
+    # Comentario para publicar sobre el primer problema de un individuo
+    mensaje de problema: # opcional
+    # Comentario para publicar en la primera solicitud de extracción de un individuo
+    pr-message: # opcional
+           Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
